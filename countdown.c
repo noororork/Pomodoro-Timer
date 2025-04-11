@@ -18,3 +18,15 @@ int main() {
     }
     printf("All done!");
 }
+
+int FSM(){
+    enum TimerState {
+        WORK,
+        BREAK,
+        END
+    };
+    
+    switch (TimerState) {
+        case 
+    }
+}
