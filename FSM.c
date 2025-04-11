@@ -1,19 +1,29 @@
 #include "countdown.h"
 #include "FSM.h"
+#include "globals.h"
 #include <stdio.h>
 #include <unistd.h>
 
-int time;
+void FSM(){ // Implements the finite state machine to alternate between states
+    enum TimerState currentState = nextState;
 
-int FSM(){
-    enum TimerState nextState = currentState;
-
-    switch (nextState) {
+    switch (currentState) {
         case WORK:
-            time = 25;
+            time = 5;
+            nextState = BREAK;
+            timer(time);
         
         case BREAK:
-            time = 5;
-
+            time = 3;
+            pomo_round += 1;
+            if (pomo_round > 4){
+                nextState = END;
+            }else{
+                nextState = WORK;
+            }
+            timer(time);
+        
+        case END:
+            break;
     }
 }

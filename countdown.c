@@ -1,32 +1,11 @@
 #include <stdio.h>
 #include <unistd.h>
+void FSM(); // Forward declaration means that we won't fall into a circular compliation issue
 
-int main() {
-    int work = 10;
-    int rest = 5;
-    for (int cycle = 1; cycle <= 4; cycle++){
-        for (int i = 0; i < work; i++){
-            printf("Time remaining: %d\n", work - i);
-            sleep(1);
-        }
-        printf("Time's up! Time for a break!\n");
-        for (int i = 0; i < rest; i++){
-            printf("Time remaining: %d\n", rest - i);
-            sleep(1);
-        }
-        printf("Break time's up! Back to work!\n");
+void timer(int time) {  // Implements the countdown timer no matter the state
+    for (int i = 0; i < time; i++){
+        printf("Time remaining: %d\n", time - i);
+        sleep(1);
     }
-    printf("All done!");
-}
-
-int FSM(){
-    enum TimerState {
-        WORK,
-        BREAK,
-        END
-    };
-    
-    switch (TimerState) {
-        case 
-    }
+    FSM();
 }
