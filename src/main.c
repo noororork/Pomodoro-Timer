@@ -1,5 +1,5 @@
-#include "countdown.h"
-#include "FSM.h"
+#include "../include/countdown.h"
+#include "../include/FSM.h"
 enum TimerState {
     WORK,
     BREAK,
