@@ -13,5 +13,6 @@ extern enum TimerState currentState;
 extern int time;
 extern int pomo_round;
 extern bool pauseState;
+extern char start[];
 
 #endif

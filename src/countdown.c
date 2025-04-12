@@ -6,6 +6,7 @@
 void FSM(); // Forward declaration means that we won't fall into a circular compliation issue
 
 void timer(int time) {  // Implements the countdown timer no matter the state
+    printf("%s", start);
     for (int i = 0; i < time; i++){
         if (_kbhit()){
             if (_getch() == 'p'){

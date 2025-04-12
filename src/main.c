@@ -12,6 +12,7 @@ enum TimerState currentState;
 int time;
 int pomo_round;
 bool pauseState = false;
+char start[30]; // Must allocate space in memory for strings
 
 void main(){
     enum TimerState nextState = WORK; 
