@@ -20,6 +20,7 @@ void timer(int time) {  // Implements the countdown timer no matter the state
                     pauseState = false;
                 }
             }
+       
         }
         printf("Time remaining: %d\n", time - i);
         sleep(1);
