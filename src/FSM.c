@@ -3,6 +3,7 @@
 #include "../include/globals.h"
 #include <stdio.h>
 #include <unistd.h>
+#include <conio.h>
 
 void FSM(){ // Implements the finite state machine to alternate between states
     enum TimerState currentState = nextState;
@@ -24,7 +25,7 @@ void FSM(){ // Implements the finite state machine to alternate between states
             }
             timer(time);
             break;
-        
+
         case END:
             break;
     }
